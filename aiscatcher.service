@@ -1,0 +1,18 @@
+# AIS-catcher service for systemd
+[Unit]
+Description=AIS-catcher
+Wants=network.target
+After=network.target
+[Service]
+User=aiscat
+RuntimeDirectory=aiscatcher
+RuntimeDirectoryMode=0755
+ExecStart=/bin/bash /usr/share/aiscatcher/start-ais.sh
+SyslogIdentifier=aiscatcher
+Type=simple
+Restart=on-failure
+RestartSec=30
+RestartPreventExitStatus=64
+Nice=-5
+[Install]
+WantedBy=default.target
