@@ -22,6 +22,8 @@
 **Copy-paste following commands one-by-one in SSH console and press Enter key. to Install / Upgrade / Reinstall _Latest Version_ of AIS-catcher.**  </br>
 
 ```
+sudo pacman -S --needed git fakeroot
+
 git clone https://github.com/abcd567a/archlinux-aiscatcher  
 
 cd archlinux-aiscatcher
