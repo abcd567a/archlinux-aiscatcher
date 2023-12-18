@@ -8,9 +8,10 @@ arch=('aarch64' 'arm64')
 source=('aiscatcher::git+https://github.com/jvde-github/AIS-catcher.git'
         'aiscatcher.service'
         'aiscatcher.conf'
-        'start-ais.sh')
+        'start-ais.sh'
+        'rtl-sdr.rules')
 
-cksums=('SKIP' 'SKIP' 'SKIP' 'SKIP')
+cksums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP')
 
 install=aiscatcher.install
 
@@ -38,6 +39,7 @@ install -Dm644 ${srcdir}/aiscatcher.service ${pkgdir}/usr/lib/systemd/system/ais
 install -Dm644 ${srcdir}/aiscatcher.conf ${pkgdir}/usr/share/aiscatcher/aiscatcher.conf
 install -dm644 ${pkgdir}/usr/share/aiscatcher/plugins
 cp ${srcdir}/aiscatcher/plugins/* ${pkgdir}/usr/share/aiscatcher/plugins/
+install -D -m644 ${srcdir}/rtl-sdr.rules ${pkgdir}/etc/udev/rules.d/rtl-sdr.rules
 }
 
 
