@@ -39,7 +39,7 @@ install -Dm644 ${srcdir}/aiscatcher.service ${pkgdir}/usr/lib/systemd/system/ais
 install -Dm644 ${srcdir}/aiscatcher.conf ${pkgdir}/usr/share/aiscatcher/aiscatcher.conf
 install -dm644 ${pkgdir}/usr/share/aiscatcher/plugins
 cp ${srcdir}/aiscatcher/plugins/* ${pkgdir}/usr/share/aiscatcher/plugins/
-install -D -m644 ${srcdir}/rtl-sdr.rules ${pkgdir}/etc/udev/rules.d/ais-rtl-sdr.rules
+install -Dm644 ${srcdir}/rtl-sdr.rules ${pkgdir}/etc/udev/rules.d/ais-rtl-sdr.rules
 }
 
 
