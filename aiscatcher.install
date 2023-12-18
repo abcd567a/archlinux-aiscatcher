@@ -1,5 +1,6 @@
 post_install(){
   useradd --system aiscat
+  usermod -G rtlsdr aiscat
   chown -R aiscat /usr/share/aiscatcher
   systemctl enable aiscatcher
   systemctl start aiscatcher
