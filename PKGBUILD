@@ -1,5 +1,10 @@
 # Contributor abcd567
 # Maintainer abcd567
+# Source-Code By: Jasper jvde-github
+
+url="https://github.com/jvde-github/AIS-catcher"
+license=('GPL')
+pkgdesc="AIS-catcher: A multi-platform AIS Receiver, by Jasper jvde-github"
 
 pkgname=aiscatcher
 pkgver=latest
@@ -16,6 +21,7 @@ cksums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP')
 install=aiscatcher.install
 
 makedepends=('git' 'make' 'gcc' 'cmake' 'pkg-config' 'rtl-sdr' 'openssl')
+depends=('rtl-sdr' 'openssl')
 
 pkgver() {
   cd ${srcdir}/aiscatcher
